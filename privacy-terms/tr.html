@@ -107,8 +107,7 @@
     <strong>a) Hesap ve Kimlik Verileri</strong>
     <ul>
         <li>Ad, soyad ve e-posta adresi (kayıt / giriş sırasında alınır)</li>
-        <li>Şifre (sunucuda kriptografik olarak hash'lenerek saklanır; düz metin olarak tutulmaz)</li>
-        <li>JWT erişim token'ı ve yenileme token'ı (oturum yönetimi için)</li>
+        <li>Şifre (sunucuda kriptografik olarak saklanır; düz metin olarak tutulmaz)</li>
     </ul>
 
     <strong>b) Kişisel Bilgi Formu Verileri</strong>
@@ -163,11 +162,11 @@
     <h3>1.5. Verilerin Saklanması</h3>
     <p>
         Hesap bilgileri, sınav cevapları ve video ilerleme verileri
-        <strong>sunucuda (bulut veritabanı – PostgreSQL)</strong> güvenli biçimde saklanmaktadır.
+        <strong>sunucuda (bulut veritabanı)</strong> güvenli biçimde saklanmaktadır.
     </p>
     <p>
-        Tema, dil tercihleri ve oturum token'ları ise
-        <strong>yalnızca cihazınızda</strong> (Redux Persist aracılığıyla yerel depolamada) tutulmaktadır.
+        Tema, dil tercihleri ve oturum anahtarları ise
+        <strong>yalnızca cihazınızda</strong> (yerel depolamada) tutulmaktadır.
     </p>
     <p>
         Kişisel Bilgi Formu verileri sunucuda saklanmakta ve yalnızca yetkili yöneticiler tarafından
@@ -200,10 +199,8 @@
     <!-- ─── -->
     <h3>1.8. Veri Güvenliği</h3>
     <ul>
-        <li>Şifreler sunucuda kriptografik olarak hash'lenerek saklanır.</li>
-        <li>API iletişimi JWT token tabanlı kimlik doğrulama ile korunmaktadır.</li>
-        <li>Sunucu tarafında Rate Limiting ve Global Exception Handling uygulanmaktadır.</li>
-        <li>Yetkisiz erişimi engellemek için rol tabanlı yetkilendirme (Admin / Super / User) kullanılmaktadır.</li>
+        <li>Şifreler sunucuda kriptografik olarak saklanır.</li>
+        <li>Yetkisiz erişimi engellemek için rol tabanlı yetkilendirme kullanılmaktadır.</li>
     </ul>
 
     <!-- ─── -->
@@ -251,7 +248,7 @@
         <li>Uygulamayı kullanmak için geçerli bir hesap oluşturmanız veya size atanmış hesap bilgileriyle giriş yapmanız gerekmektedir.</li>
         <li>Hesabınızın güvenliğinden siz sorumlusunuz; şifrenizi kimseyle paylaşmayınız.</li>
         <li>Yetkisiz erişim tespit edilmesi durumunda hesabınız askıya alınabilir.</li>
-        <li>Kayıt, yalnızca yetkili yöneticiler (Admin / Super) tarafından oluşturulabilmektedir; açık kayıt mevcut değildir.</li>
+        <li>Kayıt, yalnızca yetkili yöneticiler tarafından oluşturulabilmektedir; açık kayıt mevcut değildir.</li>
     </ul>
 
     <!-- ─── -->
